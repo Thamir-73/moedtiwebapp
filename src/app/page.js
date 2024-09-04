@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import Map from './components/Map';
-import ListView from './components/ListView';
+import ListView from './components/Listview';
 import SearchFilters from './components/SearchFilters';
 import { getUserType, setUserType } from './utils/userType';
 import { fetchEquipUseListings, fetchContractorUseListings, fetchUniqueFilterValues } from './utils/firebase';
