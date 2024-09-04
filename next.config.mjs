@@ -6,13 +6,13 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'firebasestorage.googleapis.com',
+          hostname: 'moedti.netlify.app',
           port: '',
           pathname: '/**',
         },
         {
           protocol: 'https',
-          hostname: 'via.placeholder.com',
+          hostname: 'moedti.netlify.app',
           port: '',
           pathname: '/**',
         },
