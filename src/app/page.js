@@ -13,6 +13,7 @@ import { useAuth } from './contexts/AuthContext';
 import SignIn from './components/SignIn';
 import UserTypeModal from './components/UserTypeModal';
 import { CardSkeleton, MapSkeleton } from './components/SkeletonLoadermaplist';
+import Link from 'next/link';
 
 export default function Home() {
   const [userType, setUserTypeState] = useState(null);
@@ -267,9 +268,15 @@ export default function Home() {
                     </button>
                   )}
                 </div>
-                <button className="px-6 py-2 lg:px-20 bg-orange-300 text-gray-700 rounded-lg hover:shadow-xl transition-colors">
-                  عن معدتي
-                </button>
+                <Link 
+      href="/about"
+      className="inline-block"
+    >
+      <button 
+        className="px-6 py-2 lg:px-20 bg-orange-300 text-gray-700 rounded-lg hover:shadow-xl transition-colors">
+        عن معدتي
+      </button>
+    </Link>
               </div>
             </div>
           </div>
