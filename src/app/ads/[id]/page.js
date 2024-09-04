@@ -119,7 +119,7 @@ const AdDetailPage = ({ params }) => {
 </button></div>
 <div className="flex items-center justify-center">
  <h1 className="text-3xl md:text-4xl items-center justify-center leading-tight tracking-tight text-slate-500 dark:text-slate-300 prose prose-lg max-w-none prose-slate dark:prose-invert max-w-4xl pt-1 pb-4 border-b-2 border-slate-200 dark:border-slate-600">
-  {isEquipUse ?  "صاحب المشروع" : "اعلان ايجار معدات ثقيلة"}
+  {isEquipUse ?  "اعلان ايجار معدات ثقيلة" : "صاحب المشروع" }
 </h1></div></div>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
