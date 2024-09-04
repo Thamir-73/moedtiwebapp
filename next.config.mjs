@@ -1,24 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'moedti.netlify.app',
-          port: '',
-          pathname: '/**',
-        },
-        {
-          protocol: 'https',
-          hostname: 'moedti.netlify.app',
-          port: '',
-          pathname: '/**',
-        },
-      ],
-    },
-    // You can add more configurations here as needed
-  };
-  
-  export default nextConfig;
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'moedti.netlify.app',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+        port: '',
+        pathname: '/v0/b/moedti.appspot.com/**',
+      },
+    ],
+  },
+  // You can add more configurations here as needed
+};
+
+export default nextConfig;

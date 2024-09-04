@@ -1,0 +1,19 @@
+{
+    "name": "moedti",
+    "short_name": "معدتي",
+    "icons": [
+        {
+            "src": "/lastelo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/lastelo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "transparent",
+    "background_color": "transparent",
+    "display": "standalone"
+}

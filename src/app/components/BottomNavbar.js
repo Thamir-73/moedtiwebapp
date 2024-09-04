@@ -20,7 +20,7 @@ const BottomNavbar = () => {
     }`;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-[#f8f9fa] dark:bg-[#2c3e50] border-b-2 dark:border-gray-600 backdrop-filter backdrop-blur-lg bg-opacity-70 dark:bg-opacity-70 shadow-lg">
+    <nav className="fixed bottom-0 left-0 right-0 bg-[#f8f9fa] dark:bg-[#2c3e50] border-t-2 dark:border-gray-600 backdrop-filter backdrop-blur-lg bg-opacity-70 dark:bg-opacity-70 shadow-lg z-50">
       <div className="flex justify-around items-center h-16">
         <Link href="/" className={linkClasses('/')}>
           <FaHome size={24} />
