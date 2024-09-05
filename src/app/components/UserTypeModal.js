@@ -13,15 +13,15 @@ export default function UserTypeModal({ onSelect }) {
       <div className="flex flex-col space-y-4">
         <button
           onClick={() => onSelect('yes')}
-          className="p-2 text-gray-700 dark:text-gray-300 border border-2 border-yellow-300 rounded-xl hover:bg-gray-600 transition-colors"
+          className="p-2 text-gray-700 dark:text-gray-300 border border-2 border-yellow-300 rounded-xl hover:shadow-3xl transition-colors"
         >
-          مزود معدات
+          مزود معدّات
         </button>
         <button
           onClick={() => onSelect('no')}
           className="p-2 text-gray-700 dark:text-gray-300 border border-2 border-orange-300 rounded-xl hover:shadow-3xl transition-colors"
         >
-          مقاول
+          مُستاجر معدّات
         </button>
       </div>
     </motion.div>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaUser, FaMapMarkerAlt, FaHashtag, FaClock, FaTimes } from 'react-icons/fa';
 import { formatDistanceToNow } from 'date-fns';
 import { ar } from 'date-fns/locale';
+import { useRouter } from 'next/navigation';
 
 const mapContainerStyle = {
   width: '100%',
@@ -48,6 +49,7 @@ const buildingIcon = {
 export default function Map({ listings, userType, onUserTypeSelect }) {
   const [selectedListing, setSelectedListing] = useState(null);
   const mapRef = useRef(null);
+  const router = useRouter();
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
@@ -63,6 +65,12 @@ export default function Map({ listings, userType, onUserTypeSelect }) {
 
   const handleUserTypeSelection = (type) => {
     onUserTypeSelect(type);
+  };
+
+  const handleCardClick = () => {
+    if (selectedListing && selectedListing.id) {
+      router.push(`/ads/${selectedListing.id}`);
+    }
   };
 
   const renderSelectedListingCard = () => {
@@ -87,7 +95,7 @@ export default function Map({ listings, userType, onUserTypeSelect }) {
               <FaTimes size={24} />
             </button>
           </div>
-          <div className="relative h-48 w-full mb-4">
+          <div className="relative h-48 w-full mb-4 cursor-pointer" onClick={handleCardClick}>
             {imageUrl ? (
               <Image 
                 src={imageUrl}
@@ -102,7 +110,7 @@ export default function Map({ listings, userType, onUserTypeSelect }) {
               </div>
             )}
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 cursor-pointer" onClick={handleCardClick}>
             <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
               <FaClock className="mr-2" />
               <span>{timeAgo}</span>
