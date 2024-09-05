@@ -17,6 +17,8 @@ const nextConfig = {
         pathname: '/v0/b/moedti.appspot.com/**',
       },
     ],
+    domains: ['firebasestorage.googleapis.com'],
+    unoptimized: true,
   },
   // You can add more configurations here as needed
 };
