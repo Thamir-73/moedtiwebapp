@@ -38,6 +38,7 @@ export default function MapPinCard({ listing, onClick }) {
               alt={title}
               layout="fill"
               objectFit="cover"
+              unoptimized
             />
           ) : (
             <div className="flex items-center justify-center h-full">
